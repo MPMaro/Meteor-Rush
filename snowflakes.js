@@ -28,7 +28,7 @@ function drawsnow(snflake) {
 function movesnow(snflake) {
     if (snflake.y > cnv.height) {
         snflake.y = 0;
-        snflake.x = randomInt(0, 800)
+        snflake.x = randomInt(0, cnv.width)
     }
     snflake.y += snflake.v;
 }

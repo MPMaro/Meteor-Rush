@@ -1,9 +1,6 @@
 // Setup Canvas 
-let cnv = document.getElementById("canvasEl");
-let ctx = cnv.getContext("2d");
-cnv.width = 1010;
-cnv.height = 1000;
 
+canvasSize(1000,800)
 let snow = snowflakeArray(1);
 
 requestAnimationFrame(draw);
@@ -15,8 +12,20 @@ function draw() {
         drawsnow(snow[i]);
         movesnow(snow[i]);
     }
+    stroke("red");
+    circle(mouseX, mouseY, 10, "stroke");
+
+  
     requestAnimationFrame(draw);
 }
+
+setInterval(addSnow(),100);
+
+function addSnow() {
+    array.push(newRandomsnow());
+}
+
+
 
 // Key Press 
 document.addEventListener("keydown", keyDownHandler);
@@ -30,6 +39,9 @@ function keyDownHandler(event) {
     }
 }
 
-function addSnow() {
-    array.push(newRandomsnow());
-}
+
+function circleCollide(circle1, circle2) {
+    return dist(circle1.x, circle1.y, circle2.x, circle2.y) < (circle1.r + circle2.r);
+  }
+
+  
