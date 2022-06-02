@@ -1,10 +1,10 @@
 function newRandomsnow() {
     return {
         x: randomInt(0, cnv.width),
-        y: randomInt(0, cnv.height),
+        y: 0,
         r: randomInt(10, 20),
         color: "white",
-        v: randomInt(1, 20)
+        v: randomInt(1, 15)
     }
 }
 
@@ -20,7 +20,7 @@ function snowflakeArray(total) {
 }
 
 function drawsnow(snflake) {
-    fill("#654321");
+    fill("#C4A484");
     circle(snflake.x, snflake.y, snflake.r, "fill");
    
 }
