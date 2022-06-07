@@ -47,3 +47,15 @@ function background(color) {
     fill(color);
     rect(0, 0, cnv.width, cnv.clientHeight, "fill");
 }
+
+function font(fontSetting) {
+    ctx.font = fontSetting;
+}
+
+function text(message, x, y, mode) {
+    if (mode === "fill") {
+        ctx.fillText(message, x, y);
+    } else if (mode === "stroke") {
+        ctx.strokeText(message, x, y);
+    }
+}
