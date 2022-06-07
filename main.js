@@ -51,7 +51,7 @@ let player = {
     y: 100,
     w: 20,
     h: 25,
-    v: 20
+    v: 30
 }
 
 function drawPlayer() {
@@ -104,7 +104,7 @@ function gameOver (){
     background("red")
     fill("white")
     font("50px Arial");
-    text("DAm", 350, 400, "fill");
+    text("Game Over", 350, 400, "fill");
     setInterval(reset,2000)
  
 
