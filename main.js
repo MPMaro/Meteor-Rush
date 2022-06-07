@@ -1,6 +1,9 @@
 // Setup Canvas 
 
 canvasSize(1000, 800)
+
+
+// Global Vaibles
 let snow = snowflakeArray(1);
 
 let state = "startGame"
@@ -48,7 +51,7 @@ let player = {
     y: 100,
     w: 20,
     h: 25,
-    v: 10
+    v: 20
 }
 
 function drawPlayer() {
