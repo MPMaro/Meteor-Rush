@@ -4,7 +4,7 @@ let snowflakeObjects = {
     w: randomInt(10, 20),
     h: randomInt(10, 20),
     color: "white",
-    v: randomInt(1, 5)
+    v: randomInt(3, 5)
 }
 
 // Gloabal Array

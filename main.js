@@ -25,7 +25,7 @@ function draw() {
 }
 
 // Add Snow Every 
-setInterval(addSnow, 6000  );
+setInterval(addSnow, 3000);
 
 function addSnow() {
     array.push(snowflakeObjects);
@@ -51,7 +51,7 @@ let player = {
     y: 100,
     w: 20,
     h: 25,
-    v: 30
+    v: 25
 }
 
 function drawPlayer() {
