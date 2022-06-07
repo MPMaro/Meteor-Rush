@@ -54,9 +54,16 @@ let player = {
 function drawPlayer() {
     stroke("black");
     rect(player.x, player.y, player.w, player.h, "stroke")
-    if (player.x >cnv.width){
-        player -= 1
-    }
+    if (player.x >= 980){
+        player.x = 977
+    } else if(player.x <= 0){
+        player.x = 1
+     }  else if(player.y <= 0) {
+         player.y = 0.5
+     } else if (player.y >= 775){
+         player.y = 765
+     }
+
 
 }
 
